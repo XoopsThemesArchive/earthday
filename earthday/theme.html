@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="<{$xoops_charset}>"?>
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=<{$xoops_charset}>" />
+<meta http-equiv="content-style-type" content="text/css" />
+<meta http-equiv="content-language" content="<{$xoops_langcode}>" />
+<meta name="robots" content="<{$xoops_meta_robots}>" />
+<meta name="keywords" content="<{$xoops_meta_keywords}>" />
+<meta name="description" content="<{$xoops_meta_description}>" />
+<meta name="rating" content="<{$xoops_meta_rating}>" />
+<meta name="author" content="<{$xoops_meta_author}>" />
+<meta name="copyright" content="<{$xoops_meta_copyright}>" />
+<meta name="generator" content="XOOPS" />
+<title><{$xoops_sitename}> - <{$xoops_pagetitle}></title>
+<link href="<{$xoops_url}>/favicon.ico" rel="SHORTCUT ICON" />
+<link rel="stylesheet" type="text/css" media="screen" href="<{$xoops_url}>/xoops.css" />
+<link rel="stylesheet" type="text/css" media="all" href="<{$xoops_themecss}>" />
+<!-- RMV: added module header -->
+<{$xoops_module_header}>
+<script type="text/javascript">
+<!--
+<{$xoops_js}>
+//-->
+</script>
+</head>
+<body>
+<div id="container">
+
+<div id=<{if $xoops_showrblock == 1}>"wrapper"<{else}>"wrapping"<{/if}>>
+
+<!--==================== Center Column Begin ====================-->
+<div id=<{if $xoops_showrblock == 1}>"centercolumn"<{else}>"maincolumn"<{/if}>>
+<{if $xoops_showcblock == 1}>
+<div id="centerCcolumn"> 
+<{foreach item=block from=$xoops_ccblocks}>
+<h1><{$block.title}></h1>
+<div class="blockContent"><{$block.content}></div>
+<{/foreach}> 
+</div> <!-- /centerCcolumn -->
+<div id="centerLcolumn"> 
+<{foreach item=block from=$xoops_clblocks}>
+<h2><{$block.title}></h2>
+<div class="blockContent"><{$block.content}></div>
+<{/foreach}> 
+</div> <!-- /centerLcolumn -->
+<div id="centerRcolumn"> 
+<{foreach item=block from=$xoops_crblocks}>
+<h2><{$block.title}></h2>
+<div class="blockContent"><{$block.content}></div>
+<{/foreach}> 
+</div> <!-- /centerRcolumn -->
+<{/if}> 
+<div id="content">
+<{$xoops_contents}>
+</div> <!-- /content -->
+</div> <!-- /centercolumn | /maincolumn -->
+
+<!--==================== Center Column End ====================-->
+
+<!--==================== Left Column Begin ====================-->
+<div id="leftcolumn"> 
+<{foreach item=block from=$xoops_lblocks}>
+<h2><{$block.title}></h2>
+<div class="blockContent"><{$block.content}></div>
+<div class="leftblockBottom"><img src="<{$xoops_url}>/themes/earthday/images/spacer.gif" alt="" width="1" height="8" /></div>
+<{/foreach}>
+</div> <!-- /leftcolumn -->
+<!--==================== Left Column End ====================-->
+
+</div> <!-- /wrapper | /wrapping -->
+
+<!--==================== Right Column Begin ====================-->
+<{if $xoops_showrblock == 1}>
+<div id="rightcolumn">
+<div id="rightContent">
+<{foreach item=block from=$xoops_rblocks}>
+<h2><{$block.title}></h2>
+<div class="blockContent"><{$block.content}></div>
+<div class="rightblockBottom"><img src="<{$xoops_url}>/themes/earthday/images/spacer.gif" alt="" width="160" height="12" /></div>
+<{/foreach}>
+</div> <!-- /rightContent -->
+<div class="rightcolumnBottom"><img src="<{$xoops_url}>/themes/earthday/images/spacer.gif" alt="" width="180" height="12" /></div>
+</div> <!-- /rightcolumn -->
+<{/if}>
+<!--==================== Right Column End ====================-->
+
+<!--==================== Header Begin ====================-->
+<div id="header">
+<p>
+<{if $xoops_isuser}>
+<a href="<{$xoops_url}>/user.php">Hello&nbsp;<{$xoops_uname}></a>&nbsp;|&nbsp;<a href="<{$xoops_url}>/user.php?op=logout">Logout</a> 
+<{else}>
+<a href="<{$xoops_url}>/user.php">Login</a>&nbsp;|&nbsp;<a href="<{$xoops_url}>/register.php">Join</a>
+<{/if}> 
+</p>
+<div id="naviBar">
+<div id="naviLeft"><img src="<{$xoops_url}>/themes/earthday/images/spacer.gif" alt="" width="13" height="26" /></div>
+<ul>
+<li><a href="<{$xoops_url}>/">Home</a></li>
+<li><a href="<{$xoops_url}>/modules/news/">News</a></li>
+<li><a href="<{$xoops_url}>/modules/newbb/">Forum</a></li>
+<li><a href="<{$xoops_url}>/modules/mydownloads/">Downloads</li>
+<li><a href="<{$xoops_url}>/modules/mylinks/">Links</a></li>
+<li><a href="<{$xoops_url}>/modules/contact/">Contact</a></li>
+</ul>
+<div id="naviRight"><img src="<{$xoops_url}>/themes/earthday/images/spacer.gif" alt="" width="13" height="26" /></div>
+</div> <!-- /navi_bar -->
+</div> <!-- /header -->
+<!--==================== Header End ====================-->
+
+<!--==================== Footer Begin ====================-->
+<div id="footer">
+<address><{$xoops_footer}>&nbsp;|&nbsp;Provided for <a href="http://earthday.jp" target="_blank">Earth Day</a></address>
+</div> <!-- /footer -->
+<!--==================== Footer End ====================-->
+
+</div> <!-- /container -->
+</body>
+</html>
